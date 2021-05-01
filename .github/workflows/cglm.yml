@@ -24,7 +24,7 @@ jobs:
           npm install
       - name: '运行 【猜歌联盟】'
         run: |
-          node Scripts/cglm.js
+          node Task/cglm.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
