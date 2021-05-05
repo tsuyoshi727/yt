@@ -12,7 +12,7 @@ let no,No,no0,no1,no2,no3,no4,no5,no6,no7,no8;
 var roomcount,id;
 let status;
 status = (status = ($.getval("kxhystatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-var kxhyheaderArr = []
+var kxhyheaderArr = ['{"bs":"CDMA","osVersion":"iOS%2013.50","Host":"bp-api.coohua.com","pkgId":"229","Accept-Encoding":"gzip, deflate, br","deviceId":"0","wechatId":"default","Origin":"file://","brand":"Apple","channel":"AppStore","appVersion":"1.0.3","accessKey":"581827511bcb86bc1ebd8e8bc1876b54_214302633","Connection":"keep-alive","romVersion":"iOS%2013.50","Accept-Language":"zh-cn","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148","os":"iOS","Content-Type":"application/json","oaid":"","Accept":"*/*","Content-Length":"37","gps":"default"}']
 var adheaderArr = []
 var adbodyArr = []
 let kxhyheader = $.getdata('kxhyheader')
