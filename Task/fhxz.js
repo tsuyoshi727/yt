@@ -24,7 +24,7 @@ https://sunnytown.hyskgame.com/api/messages\SaccessToken=\w+&msgtype=system_getG
 const $ = new Env('富豪小镇'); 
  let status; 
  status = (status = ($.getval("fhxzstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符 
- const fhxzurlArr = [], fhxzhdArr = [],fhxzcount = '' 
+ const fhxzurlArr = ['https://sunnytown.hyskgame.com/api/messages?accessToken=212354_1619807470_ff91c1d3b592d45b43afaa373942dadf&msgtype=system_getGpvGameOptions'], fhxzhdArr = ['{"Accept":"*/*","Accept-Encoding":"gzip, deflate, br","Connection":"keep-alive","Content-Type":"application/octet-stream","Host":"sunnytown.hyskgame.com","User-Agent":"fuhaoxiaozhen/22 CFNetwork/1126 Darwin/19.5.0","Content-Length":"116","Accept-Language":"zh-cn","X-Unity-Version":"2019.2.9f1"}'],fhxzcount = '' 
  let times = Math.round(Date.now() / 1000) 
  let fhxzurl = $.getdata('fhxzurl') 
  let fhxzhd = $.getdata('fhxzhd') 
