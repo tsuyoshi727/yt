@@ -3,7 +3,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/55 * * * *'
+    - cron: '0 0-7 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -31,9 +31,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【风云变幻】'
+      - name: '运行 【返利网】'
         run: |
-          node Task/jdtq.js
+          node Task/flw.js
         env:
           #RLURL: ${{ secrets.RLURL }}
           #RLHEADER: ${{ secrets.RLHEADER }}
