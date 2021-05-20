@@ -48,7 +48,7 @@ hostname = www.shikeshijie.com
 const $ = new Env('食客江湖');
 let status;
 status = (status = ($.getval("skjhstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-const skjhhdArr = ['{"Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","X-Auth-Platform":"ios","Content-Type":"application/x-www-form-urlencoded","X-Auth-Token":"79a8a8b1-2bc1-4583-bf5c-7b761d11bdff","X-Auth-Clientid":"7b384141fd1e809001c0ac8bfa4713db","User-Agent":"iPhone11,2(iOS/13.5) Uninview(Uninview/1.0.0) Weex/0.26.0 1125x2436","Host":"www.shikeshijie.com","X-Auth-Version":"1.5.0","Accept-Language":"zh-CN,zh;q=0.9,en;q=0.8","Accept":"*/*","Content-Length":"0"}'],skjhtxhdArr = [],skjhcount = ''
+const skjhhdArr = ['{"Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","X-Auth-Platform":"ios","Content-Type":"application/x-www-form-urlencoded","X-Auth-Token":"b0bba9ac-4e76-4550-bea8-aed19a2e05f5","X-Auth-Clientid":"8aa9b551886114fb245ccb921bf6a401","User-Agent":"iPhone11,2(iOS/13.5) Uninview(Uninview/1.0.0) Weex/0.26.0 1125x2436","Host":"www.shikeshijie.com","X-Auth-Version":"1.5.5","Accept-Language":"zh-CN,zh;q=0.9,en;q=0.8","Accept":"*/*","Content-Length":"0"}'],skjhtxhdArr = [],skjhcount = ''
 let skjhhd = $.getdata('skjhhd')
 let jltx = ($.getval('jltx') || '0.3');//提现金额
 !(async () => {
