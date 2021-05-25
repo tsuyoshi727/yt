@@ -57,7 +57,7 @@ hostname = app.hubonews.com
 const $ = new Env('西梅');
 let status;
 status = (status = ($.getval("ximeistatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-const ximeiurlArr = [], ximeihdArr = [],ximeicount = ''
+const ximeiurlArr = ['https://app.hubonews.com/v4/articles/list'], ximeihdArr = ['{"Accept-Encoding":"gzip, deflate, br","Host":"app.hubonews.com","X_CLIENT_CHANNEL":"App Store","X_CLIENT_APP":"com.tigerye.tigerobo","X_CLIENT_PLATFORM":"iOS","Connection":"keep-alive","DEVICE_ID":"91C8BAD8-88D1-45CE-9B06-C3BEA8C168B9","BRAND_PRODUCT":"Apple-iPhone11,2","X_CLIENT_TRANSLATION_LANGUAGE":"en","Accept-Language":"zh-Hans-CN;q=1","User-Agent":"tigerobo/2.8.3 (iPhone; iOS 13.5; Scale/3.00)","Content-Type":"application/json","X_CLIENT_IDFA":"00000000-0000-0000-0000-000000000000","X_CLIENT_COUNTRY":"CN","X_CLIENT_VERSION":"2.8.3","Accept":"*/*","X_CLIENT_BUILD":"246","API_AUTHORIZATION":"oIFacdgmmdiiuYynefPo","X_CLIENT_LANGUAGE":"zh","Content-Length":"21"}'],ximeicount = ''
 let times = Math.round(Date.now())
 let ximeiurl = $.getdata('ximeiurl')
 let ximeihd = $.getdata('ximeihd')
