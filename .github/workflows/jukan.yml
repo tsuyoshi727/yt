@@ -1,5 +1,5 @@
 
-name: jukan(聚看点)
+name: jukan
 
 on:
   workflow_dispatch:
