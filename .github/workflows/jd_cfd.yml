@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【京喜财富岛】'
         run: |
-          node jd_cfd.js
+          node Task/jd_cfd.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
