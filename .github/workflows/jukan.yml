@@ -1,36 +1,29 @@
+name: 聚看点
 
-name: jukan
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/15 * * * *'
+     - cron: '*/25 * * * *'
   watch:
     types: started
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        JUKAN_COOKIE: ${{ secrets.JUKAN_COOKIE }}
-        JUKAN_BODY: ${{ secrets.JUKAN_BODY }}
-        TZ: Asia/shanghai
+    if: github.event.repository.owner.id == github.event.sender.id   
     steps:
       - name: Checkout
-        run: |
-          git clone https://github.com/a1564471347/ZQ1.git ~/ZQ1
+        uses: actions/checkout@v1
+        
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
         run: |
-          cd ~/ZQ1
           npm install
       - name: '运行 【聚看点】'
-        if: env.JUKAN_COOKIE
         run: |
-          cd ~/ZQ1
           node Task/jukan.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
@@ -39,4 +32,4 @@ jobs:
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
           BARK_SOUND: ${{ secrets.BARK_SOUND }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }} 
