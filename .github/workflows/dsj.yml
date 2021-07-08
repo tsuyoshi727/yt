@@ -34,7 +34,6 @@ jobs:
       - name: '运行 【电视家】'
         run: |
           node Task/dsj.js
-.js
         env:
           #RLURL: ${{ secrets.RLURL }}
           #RLHEADER: ${{ secrets.RLHEADER }}
