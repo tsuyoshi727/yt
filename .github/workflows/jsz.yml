@@ -3,7 +3,7 @@ name: jsz
 on:
   workflow_dispatch:
   schedule:
-    - cron: '45 1,3,6,9,12,15,18,21 * * *'
+    - cron: '45 1,3,6,9,12,15,18 * * *'
   watch:
     types: started
   repository_dispatch:
