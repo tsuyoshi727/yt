@@ -44,7 +44,7 @@ const $ = new Env('趣键盘极速版');
 let status;
 
 status = (status = ($.getval("qjpstatus") || "1")) > 1 ? `${status}` : "";
-const qjpurlArr = [], qjphdArr = [], qjpbodyArr = [], qjpcount = ''
+const qjpurlArr = [], qjphdArr = [{"Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","User-Agent-App-Version":"1.8.5","User-Agent-TK":"ACJBcqVdqJPE3pX9BTIPcyRVRiDu6C-gMolxanA","Auth-Token":"1fba73a2-ac73-4c52-a2cb-8d609d320c0e","Content-Type":"application/json;charset=utf-8","Origin":"https://h5.51biaoqing.com","User-Agent-Channel":"jsappstore","User-Agent":"INX 1.0/IOS/iPhone/00000000/15.1/com.qujianpan.client/1.8.5.1/AppStore/","User-Agent-Platform":"ios","Host":"qjp.qujianpan.com","User-Agent-PRO":"qjppro","Referer":"https://h5.51biaoqing.com/","Accept-Language":"zh-CN,zh-Hans;q=0.9","Accept":"*/*","Content-Length":"2"}& {"Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","User-Agent-App-Version":"1.5.1","User-Agent-TK":"ACJBcqVdqJPE3pX9BTIPcyRVroE8zDLUtHpxdWppYW5wYW5wdXJl","Auth-Token":"7f7b853c-3fdc-4fe3-be87-5ee397e1baf6","Content-Type":"application/json;charset=utf-8","Origin":"https://h5.51biaoqing.com","User-Agent-Channel":"jsappstore","User-Agent":"INX 1.0/IOS/iPhone/00000000/15.1/com.qujianpan.pure/1.5.1.1/AppStore/","User-Agent-Platform":"ios","Host":"qjp.qujianpan.com","User-Agent-PRO":"qjppure","Referer":"https://h5.51biaoqing.com/","Accept-Language":"zh-CN,zh-Hans;q=0.9","Accept":"*/*","Content-Length":"2"}], qjpbodyArr = [], qjpcount = '2'
 let qjpurl = $.getdata('qjpurl')
 let qjphd = $.getdata('qjphd')
 let qjpbody = $.getdata('qjpbody')
