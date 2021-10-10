@@ -32,7 +32,7 @@ let status;
 status = (status = ($.getval("qxqstatus") || "1")) > 1 ? `${status}` : "";
 let qxqurlArr = [https://api.xqustar.com/api/task/v2/list], qxqhdArr = [{"Connection":"keep-alive","version":"2.1.7","Accept-Encoding":"gzip, deflate, br","channel":"ios","plat":"app","Content-Type":"application/json","JSESSIONID":"557781D8503A663A10EF933472D94062","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Html5Plus/1.0 (Immersed/44) uni-app","platform":"ios","Authorization":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpbnQiLCJpZCI6IjY5ZmQ4MzlkLTkzY2ItNDk1YS1hNzhiLWQwODA3YzU4YzI5NSIsInR5cGUiOiJ3ZWl4aW4ifQ.1Wxqtf0Ch1zoKdMPfR27wvYtvtPwCL1t9x_nqEPdfds","Cookie":"JSESSIONID=557781D8503A663A10EF933472D94062","Host":"api.xqustar.com","Accept-Language":"zh-cn","Accept":"*/*"}], qxqcount = '1'
 let qxqurl = $.getdata('qxqurl')
-let qxqhd= $.isNode() ? (process.env.qxqhd ? process.env.qxqhd : "") : ($.getdata('qxqhd') ? $.getdata('qxqhd') : "")
+//let qxqhd= $.isNode() ? (process.env.qxqhd ? process.env.qxqhd : "") : ($.getdata('qxqhd') ? $.getdata('qxqhd') : "")
 
 let b = Math.round(new Date().getTime() / 1000).toString();
 let DD = RT(1000, 1500)
@@ -46,13 +46,13 @@ let qxqhds = ""
 
 
 
-!(async () => {
-    if (typeof $request !== "undefined") {
-        await qxqck()
-    } else {
-        if(!$.isNode()){
-        qxqurlArr.push($.getdata('qxqurl'))
-        qxqhdArr.push($.getdata('qxqhd'))
+//!(async () => {
+    //if (typeof $request !== "undefined") {
+        //await qxqck()
+    //} else {
+        //if(!$.isNode()){
+        //qxqurlArr.push($.getdata('qxqurl'))
+        //qxqhdArr.push($.getdata('qxqhd'))
 
         let qxqcount = ($.getval('qxqcount') || '1');
         for (let i = 2; i <= qxqcount; i++) {
