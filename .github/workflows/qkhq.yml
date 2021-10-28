@@ -3,7 +3,7 @@ name: qkhq
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 18 * * *'
+    - cron: '15 */3 * * *'
   watch:
     types: started
   repository_dispatch:
