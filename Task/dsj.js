@@ -16,8 +16,7 @@ let middledsjHEADER = [];
 
 
 
-dsjheaderArr = [
-            ]
+dsjheaderArr = []
 
 console.log(`${GXRZ}\n`);
 $.message += `${GXRZ}\n`
