@@ -13,7 +13,7 @@ jobs:
 
       - name: Checkout
         run: |
-          git clone https://github.com/kongjianweimei/18.git ~/js
+          git clone https://github.com/a1564471347/ZQ1.git ~/js
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
