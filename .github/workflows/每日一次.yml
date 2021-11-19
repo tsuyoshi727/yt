@@ -1,32 +1,35 @@
-name: 每yk11 
+name: 每日一次
+
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *'
+     - cron: '0 11 * * *'
+  watch:
+    types: started
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+    if: github.event.repository.owner.id == github.event.sender.id   
     steps:
       - name: Checkout
-        run: |
-          git clone https://github.com/kongjianweimei/18.git ~/js
-      - name: Use Node.js 14.x
+        uses: actions/checkout@v1
+        
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 12.x
       - name: npm install
         run: |
-          cd ~/js
           npm install
-          npm install cron
-          npm install request
-          curl ipinfo.io/json
-      - name: '【每日一次】'
+      - name: '运行 【每日一次】'
         run: |
-          cd ~/js/Task
-          node checkin.js
+          node Task/checkin.js
         env:
-          ENCRYPT_KEY: ${{ secrets.ENCRYPT_KEY }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }} 
