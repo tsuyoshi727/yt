@@ -39,9 +39,9 @@ async function all() {
             await TaskAD(8);
             await $.wait(randomNum(0, 1));
             await TaskAD(9);
-            await $.wait(randomNum(0, 1));
+            await $.wait(randomNum(1, 2));
             await TaskAD(10);
-            await $.wait(randomNum(0, 1));
+            await $.wait(randomNum(2, 3));
             await TaskAD(11);
         }
     }
