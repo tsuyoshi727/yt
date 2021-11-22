@@ -104,7 +104,7 @@ function NineWithDraw() {
   return new Promise((resolve, reject) => {
     const url = "https://api.st615.com/v1/cash/withdraw-new";
     const headers = {};
-    const body = `token=${Token}&type=1&money=0.3`;
+    const body = `token=${Token}&type=1&money=30`;
     const request = {
       url: url,
       headers: headers,
