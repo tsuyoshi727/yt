@@ -22,26 +22,26 @@ async function all() {
         $.log(`开始执行第${i+1}个账号`);
         Token=TokenArr[i];
         await DailySign();
-        await $.wait(randomNum(1000, 20000));
+        await $.wait(randomNum(0, 1));
         await DailyCheck();
-        await $.wait(randomNum(1000, 20000));
+        await $.wait(randomNum(0, 1));
         await ArticelsList();
         for (let i = 0; i < articleidarr.length; i++) {
             await ArticleFinish(articleidarr[i]);
-            await $.wait(randomNum(30000, 40000));
+            await $.wait(randomNum(0, 1));
         }
 
         for (let i = 0; i < 5; i++) {
             await ArticleShare();
-            await $.wait(randomNum(0, 5000));
+            await $.wait(randomNum(0, 1));
         }
         for (let i = 0; i < 3; i++) {
             await TaskAD(8);
-            await $.wait(randomNum(120000, 129999));
+            await $.wait(randomNum(0, 1));
             await TaskAD(9);
-            await $.wait(randomNum(120000, 129999));
+            await $.wait(randomNum(0, 1));
             await TaskAD(10);
-            await $.wait(randomNum(120000, 129999));
+            await $.wait(randomNum(0, 1));
             await TaskAD(11);
         }
     }
