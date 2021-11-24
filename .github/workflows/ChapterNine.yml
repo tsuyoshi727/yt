@@ -4,7 +4,7 @@ name: 九章头条
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/25 * * * *'
+     - cron: '*/45 * * * *'
   watch:
     types: started
 jobs:
