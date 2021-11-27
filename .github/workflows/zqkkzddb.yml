@@ -33,7 +33,7 @@ jobs:
           npm install
       - name: '运行 【中青看看赚】'
         run: |
-          node Task/zqkkzdddb.js
+          node Task/zqkkzddb.js
         env:
           #RLURL: ${{ secrets.RLURL }}
           #RLHEADER: ${{ secrets.RLHEADER }}
