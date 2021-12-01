@@ -3,7 +3,7 @@ name: zqkkzddb
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */7 * * *'
+    - cron: '0 */1 * * *'
   watch:
     types: started
   repository_dispatch:
