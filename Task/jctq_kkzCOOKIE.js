@@ -60,7 +60,7 @@ module.exports = {
     "favIconColor": "grey",
     "datas": [{
       "key": "jctqCookie",
-      "val": ""
+      "val": "uid=55747365&version_code=839&zqkey=MDAwMDAwMDAwMJCMpN-w09Wtg5-Bb36eh6CPqHualIejl6-Fx2Kx3YFrhYyp4LDPyGl9onqkj3ZqYJa8Y898najWsJupZLDdm2qEjI6Xr6mmapqGcXY&zqkey_id=fa7555c42dafe45070d31db40848fbae"
     }, {
       "key": "jctqCookie2",
       "val": ""
