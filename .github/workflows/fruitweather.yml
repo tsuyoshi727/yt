@@ -33,7 +33,7 @@ jobs:
           npm install
       - name: '运行 【fruitweather】'
         run: |
-          node Task/jdtq_reward.js
+          node Task/jctq_reward.js
         env:
           #RLURL: ${{ secrets.RLURL }}
           #RLHEADER: ${{ secrets.RLHEADER }}
