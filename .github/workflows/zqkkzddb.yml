@@ -31,9 +31,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【舯慶颛】'
+      - name: '运行 【zqkkzddb】'
         run: |
-          node Task/舯慶颛.js
+          node Task/zqkkzddb.js
         env:
           #RLURL: ${{ secrets.RLURL }}
           #RLHEADER: ${{ secrets.RLHEADER }}
