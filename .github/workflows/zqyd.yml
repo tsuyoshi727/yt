@@ -1,4 +1,4 @@
-name: 舯慶蠹
+name: zqyd
 
 on:
   workflow_dispatch:
@@ -31,9 +31,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【舯慶蠹】'
+      - name: '运行 【zqyd】'
         run: |
-          node Task/舯慶蠹.js
+          node Task/zqyd.js
         env:
           #RLURL: ${{ secrets.RLURL }}
           #RLHEADER: ${{ secrets.RLHEADER }}
