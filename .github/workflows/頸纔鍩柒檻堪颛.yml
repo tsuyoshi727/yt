@@ -2,8 +2,8 @@ name: 頸纔鍩柒檻堪颛
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 */7 * * *'
+  #schedule:
+    #- cron: '0 */7 * * *'
   watch:
     types: started
   repository_dispatch:
