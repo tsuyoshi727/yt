@@ -5,8 +5,8 @@ name: 中青看点
 
 on:
   workflow_dispatch:
-  schedule:
-     - cron: '*/12 * * * *'
+  #schedule:
+     #- cron: '*/12 * * * *'
   watch:
     types: started
 
