@@ -2,8 +2,8 @@ name: fruitweather
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '20 9 * * *'
+  #schedule:
+    #- cron: '20 9 * * *'
   watch:
     types: started
   repository_dispatch:
