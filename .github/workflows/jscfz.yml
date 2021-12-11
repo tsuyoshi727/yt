@@ -2,8 +2,8 @@ name: jscfz
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '35 */4 * * *'
+  #schedule:
+    #- cron: '35 */4 * * *'
   watch:
     types: started
   repository_dispatch:
