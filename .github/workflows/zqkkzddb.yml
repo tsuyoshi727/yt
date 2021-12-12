@@ -3,26 +3,42 @@ name: kkz
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 1,10 * * *'
+    - cron: '0 */8 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: ranlv
 jobs:
   build:
-    runs-on: ubuntu-latest    
+
+    runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-        run: |
-          git clone https://github.com/tsuyoshi727/yt.git ~/yt
-      - name: Use Node.js 14.x
+        uses: actions/checkout@v2
+       
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2 # 使用 GitHub 官方缓存 Action。
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
-          cd ~/yt
           npm install
-          npm install cron
-          npm install request
-      - name: '运行 【中青阅读1】'
+      - name: '运行 【zqkkzddb】'
         run: |
-          cd ~/yt
           node Task/zqkkzddb.js
+        env:
+          #RLURL: ${{ secrets.RLURL }}
+          #RLHEADER: ${{ secrets.RLHEADER }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
